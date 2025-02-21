@@ -4,7 +4,7 @@
 Irradiance calculations for Earth. Beta version. A release version is coming, which will also have a jupyter notebook to introduce the various functions and what can be done with them.
 
 ## Install
-You can install it into your python environment using:
+You can install into your python environment using:
 
 `pip install git+https://github.com/bryanlougheed/orbitalthebox.git`
 
