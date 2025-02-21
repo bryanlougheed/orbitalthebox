@@ -11,6 +11,5 @@ setup(
         # List your package dependencies here
         'numpy',
         'pandas',
-        'os',
     ],
 )
