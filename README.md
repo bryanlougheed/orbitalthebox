@@ -9,7 +9,7 @@ You can install into your python environment using:
 `pip install git+https://github.com/bryanlougheed/orbitalthebox.git`
 
 ## License
-The GPL license is permissive so I guess you can just republish everything under a new name without contacting me first, but I'd prefer if you didn't.
+The GPL license is permissive but please be reasonable.
 
 ## List of functions
 Each function is has help documentation that you can access using the standard python `?` command.
