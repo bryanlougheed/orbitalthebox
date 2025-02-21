@@ -1,1 +1,1 @@
-from orbitalthebox import *
+from .orbitalthebox import *
