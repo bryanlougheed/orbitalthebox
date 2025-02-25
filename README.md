@@ -8,9 +8,9 @@ You can install into your python environment using terminal command (you may nee
 
 `pip install git+https://github.com/bryanlougheed/orbitalthebox.git`
 
-If install has been successul then you should be able to import it the usual way, e.g.:
+If the install has been successul then you should be able to import it in python in the usual way, e.g.:
 
-`import orbitalthebox'
+`import orbitalthebox`
 
 ## License
 The GPL license is permissive but please be reasonable.
