@@ -16,7 +16,7 @@ If the install has been successul then you should be able to import it in python
 The GPL license is permissive but please be reasonable.
 
 ## List of functions
-Each function is has help documentation that you can access using the standard python `?` command.
+Each function is has help documentation that you can access using the standard python `?` command. More functions will follow as I bug test them in python.
 
 `getlaskar2004()`
 `getlaskar2010()`
