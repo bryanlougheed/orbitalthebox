@@ -1,7 +1,7 @@
-# orbitalthebox
+# orbitalthebox python package
 
 ## Short description
-Irradiance calculations for Earth. Beta version. A release version is coming, which will also have a jupyter notebook to introduce the various functions and what can be done with them.
+A package for using orbital parameters to carry out various irradiance calculations for Earth. Beta version. A release version is coming, which will also have a jupyter notebook tutorial.
 
 ## Install
 You can install into your python environment using the `pip` terminal command (you may need to install `git` first):
