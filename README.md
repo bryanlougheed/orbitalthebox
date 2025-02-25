@@ -4,11 +4,11 @@
 A package for using orbital parameters to carry out various irradiance calculations for Earth. Beta version. A release version is coming, which will also have a jupyter notebook tutorial.
 
 ## Install
-You can install into your python environment using the `pip` terminal command (you may need to [install](https://github.com/git-guides/install-git) `git` first):
+You can install the package into your python environment using the `pip` terminal command (you may need to [install](https://github.com/git-guides/install-git) `git` first):
 
 `pip install git+https://github.com/bryanlougheed/orbitalthebox.git`
 
-If the install has been successul then you should be able to import it in python in the usual way, e.g.:
+If the install has been successul then you should be able to import the package in python in the usual way, e.g.:
 
 `import orbitalthebox`
 
