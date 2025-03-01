@@ -501,17 +501,18 @@ def dailymeanwm2(lat, sollon, ecc, obl, lpe, con=1361, earthshape='sphere'):
     Meeus, J., (1998). Astronomical Algorithms, 2nd ed. Willmann-Bell, Inc., Richmond, Virginia. (specifically Chapter 30)    
     """
 
+    # Declination angle of the sun
+    # https://en.wikipedia.org/wiki/Position_of_the_Sun
+    dsun = np.arcsin(np.sin(obl) * np.sin(sollon))
+
     if earthshape == 'sphere':
         # geographic latitude = geocentric latitude
         pass
     elif earthshape == 'wgs84':
         lat = geographiclat(lat)
+        dsun = geographiclat(dsun)
     else:
         raise ValueError('earthshape '+earthshape+' unrecognised')
-
-    # Declination angle of the sun
-    # https://en.wikipedia.org/wiki/Position_of_the_Sun
-    dsun = np.arcsin(np.sin(obl) * np.sin(sollon))
 
     # Hour angle at sunrise/sunset
     # https://en.wikipedia.org/wiki/Sunrise_equation
@@ -537,7 +538,7 @@ def dailymeanwm2(lat, sollon, ecc, obl, lpe, con=1361, earthshape='sphere'):
     #     hemelterm = (np.cos(vangle) * (hangle * np.sin(lat) * np.sin(dsun) + np.sin(hangle) * np.cos(lat) * np.cos(dsun)) + np.sin(vangle) * (-np.tan(lat) * (hangle * np.sin(lat) * np.sin(dsun) + np.sin(hangle) * np.cos(lat) * np.cos(dsun)) + hangle * np.sin(dsun) / np.cos(lat)))
     #     # Irradiation: Berger (1978) eq. 10, but replace final term with Van Hemelrijck (1983) eq. 11 second term
     #     irr = con / np.pi * (1 + ecc * np.cos(sollon - omega))**2 / (1 - ecc**2)**2 * hemelterm
-    # # produces exact same output as simply inputting the corrected latitude (calculated at top of this function) into Berger equation below, which seems easier.. 
+    # # produces exact same output as simply inputting geographic latitude into Berger equation below, which seems easier.. 
 
     # 24 hr mean irradiance: Berger (1978) eq (10)
     irr = con / np.pi * (1 + ecc * np.cos(sollon - omega))**2 / (1 - ecc**2)**2 * ( hangle * np.sin(lat) * np.sin(dsun) + np.cos(lat) * np.cos(dsun) * np.sin(hangle))
